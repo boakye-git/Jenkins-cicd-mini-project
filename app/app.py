@@ -38,7 +38,7 @@ def add_route(a, b):
 
 @app.route("/subtract/<int:a>/<int:b>")
 def subtract_route(a, b):
-    return jsonify(result=add(a, b))
+    return jsonify(result=subtract(a, b))
 
 
 
