@@ -16,7 +16,7 @@ def add(a, b):
 
 
 def subtract(a, b):
-    """Return the difference of two numbers. Kept pure so it is trivial to test."""
+    """Return the difference of two numbers."""
     return a - b
 
 
@@ -39,7 +39,6 @@ def add_route(a, b):
 @app.route("/subtract/<int:a>/<int:b>")
 def subtract_route(a, b):
     return jsonify(result=subtract(a, b))
-
 
 
 if __name__ == "__main__":

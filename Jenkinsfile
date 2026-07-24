@@ -38,6 +38,18 @@ pipeline {
             }
         }
 
+        stage('Lint') {
+            steps {
+                echo 'Stage 3: Linting the code with flake8'
+                dir('app') {
+                    sh '''
+                        . venv/bin/activate
+                        flake8 app.py
+                    '''
+                }
+            }
+        }
+
         stage('Test') {
             steps {
                 echo 'Stage 3: Running the unit tests'
