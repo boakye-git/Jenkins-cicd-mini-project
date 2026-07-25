@@ -12,9 +12,9 @@ def test_add():
     assert add(-1, 1) == 0
 
 
-def test_subtract():
-    assert subtract(5, 3) == 2
-    assert subtract(-1, 2) == -3
+#def test_subtract():
+#    assert subtract(5, 3) == 2
+#    assert subtract(-1, 2) == -3
 
 
 def test_home_route():
@@ -38,11 +38,11 @@ def test_add_route():
     assert response.get_json()["result"] == 9
 
 
-def test_subtract_route():
-    client = app.test_client()
-    response = client.get("/subtract/6/2")
-    assert response.status_code == 200
-    assert response.get_json()["result"] == 4
+# def test_subtract_route():
+#    client = app.test_client()
+#    response = client.get("/subtract/6/2")
+#    assert response.status_code == 200
+#    assert response.get_json()["result"] == 4
 
 
 
